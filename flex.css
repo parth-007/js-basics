@@ -20,7 +20,13 @@
     flex-basis: 12%;
 }
 
+/* @media (max-width: 732px) {
 
+}
+
+@media screen and (min-width:1110px){
+
+} */
 
 .container-1 div, .container-2 div, .container-3 div {
     border: 1px solid #CCC;
