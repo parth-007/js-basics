@@ -1,0 +1,90 @@
+#outer {
+    background: gold;
+    height: 500px;
+    width: 500px;
+    position: relative;
+}
+
+#inner {
+    background: red;
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#outer1 {
+    background: gold;
+    height: 500px;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#inner1 {
+    background: red;
+    height: 200px;
+    width: 200px;
+}
+
+.circle {
+    height: 100px;
+    width: 100px;
+    background: lime;
+    border-radius: 50%;
+}
+
+.triangle {
+    height: 0;
+    width: 0;
+    border-right: 100px solid transparent;
+    border-left: 100px solid transparent;
+    border-bottom: 100px solid yellow;
+}
+
+p:hover::after {
+    content: "Parth"
+}
+
+#d:hover::after {
+    content: attr(data-name)
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#gp {
+    height: 200px;
+    width: 200px;
+    background: orange;
+}
+
+#p {
+    height: 100px;
+    width: 100px;
+    background: whitesmoke;
+}
+
+#c {
+    height: 50px;
+    width: 50px;
+    background: green;
+}
+
+#cc {
+    height: 20px;
+    width: 20px;
+    background: blue;
+}
+
+.triangle:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
+}
