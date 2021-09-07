@@ -32,7 +32,7 @@ console.log(combinedObj);
 // Can change name
 user1.name = 'Virat';
 
-// Freeze the object, Addition, Updation not allowed
+// Freeze the object, Addition, Updation, Deletion not allowed
 Object.freeze(user1);
 user1.name = 'Pa'; // No change
 user1.city = 'Surat'; // No change
@@ -40,7 +40,7 @@ console.log(user1); // No change
 
 console.log(Object.isFrozen(user1)); // Returns true
 
-// Seals the object, No addition allowed, updatation allowed
+// Seals the object, No addition and deletion is allowed, updatation allowed
 Object.seal(newUser);
 
 newUser.name = 'Parth1'; // Change
@@ -49,3 +49,49 @@ console.log(newUser); // name gets updated
 
 console.log(Object.isSealed(newUser)); // True
 console.log(Object.isSealed(user1)); // True
+
+// Not allowed
+delete newUser['school'];
+
+const user2 = new User('Ryan', 20, 'NY');
+user2.state = 'TX';
+
+delete user2.state;
+console.log(user2); // State property is deleted now.
+
+// Check for property
+console.log('state' in user2);
+console.log('age' in user2);
+
+// Key value pair print
+for(key in user2) {
+    console.log(key + "->" + user2[key]);   
+}
+
+// Assign a method
+user2.greet = function(){
+    console.log("Good morning");
+}
+user2.greet();
+
+// User3
+const user3 = {
+    firstName: 'Luke',
+    lastName: 'Ronchie',
+    greet: function() {
+        console.log("Hello," + this.firstName + " " + this.lastName);
+    }
+}
+user3.greet();
+
+const obj = {
+    firstName: "A",
+    lastName: "B"
+}
+const obj2 = {
+    firstName: "C",
+    lastName: "D"
+}
+
+// Call
+user3.greet.call(obj2);
