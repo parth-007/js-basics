@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class='container'>
+        <div class="mySlides fade">
+            <div class='number'>1 / 3</div>
+            <img src="https://source.unsplash.com/753x263/?travel, plane">
+            <div class='text'>Travel in Plane</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class='number'>2 / 3</div>
+            <img src="https://source.unsplash.com/753x263/?travel, train">
+            <div class='text'>Travel in Train</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class='number'>3 / 3</div>
+            <img src="https://source.unsplash.com/753x263/?travel, bus">
+            <div class='text'>Travel in Bus</div>
+        </div>
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span> 
+      </div>
+</body>
+<script src="index.js"></script>
+</html>
