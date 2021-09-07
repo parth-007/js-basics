@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        div p:first-child {
+            background: gold;
+        }
+
+        div p:last-child:hover {
+            background: lime;
+        }
+
+        div p:nth-child(2) {
+            background: red;
+        }
+
+        div p:first-of-type {
+            font-weight: 600;
+        }
+
+        div.p1 p::first-line {
+            background: purple;
+            color: white;
+        }
+
+        #content::before {
+            content: "This is before, ";
+        }
+
+        #content::after {
+            content: " This is after";
+        }
+
+        #square::before {
+            content: "";
+            height: 100px;
+            width: 100px;
+            display: block;
+            border: 1px solid black;
+            background: red;
+        }
+
+        #square::after {
+            content: "";
+            height: 100px;
+            width: 100px;
+            display: block;
+            border: 1px solid black;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum et enim minus!</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque, consectetur?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde recusandae minima voluptas atque obcaecati maiores voluptatem debitis quas ut expedita.</p>
+    </div>
+
+    <div class="p1">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel odio assumenda doloribus. Inventore debitis ipsa, numquam id voluptatum hic! Aliquam ipsam provident nobis mollitia quas? Cupiditate numquam porro aut nulla impedit ipsa, quia, quos ab repellendus, quas qui nisi?</p>
+        <p id="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi debitis odio magni eveniet soluta?</p>
+    </div>
+
+    <div>
+        <p id="square">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    </div>
+</body>
+</html>
