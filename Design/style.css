@@ -1,0 +1,42 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    background: lime;
+    height: 50px;
+}
+
+main {
+    display: flex;
+    height: calc(100vh - 50px);
+}
+
+.sidebar {
+    background: gold;
+    flex: 15;
+}
+
+.content {
+    flex: 85;
+    background: lavender;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.item {
+    flex: 0 1 calc(17% - 8px);
+    margin: 10px;
+    height: 100px;
+}
+
+.item:nth-child(3n),
+.item:nth-child(3n + 2) {
+    background: cyan;
+}
+
+.item:nth-child(3n+1) {
+    background: darkorange;
+}
