@@ -15,24 +15,37 @@ let obj = {
         name : "ram"
     }
 }
-let finalObj = {};
 console.log(obj);
+let finalObj1 = {};
+let finalObj2 = {};
 
-for(let key in obj)
-{
-    console.log(key, obj[key]);
-}
-
-const magic = (obj, parent) => {
+const magic1 = (obj, parent) => {
     for(let key in obj) {
         if(typeof obj[key] === 'object') {
-            magic(obj[key], parent+"_"+key);
+            magic1(obj[key], parent+"_"+key);
         }
         else {
-            finalObj[parent+"_"+key] = obj[key];
+            finalObj1[parent+"_"+key] = obj[key];
         }
     }
 }
-magic(obj, "obj");
+magic1(obj, "obj");
+console.log(finalObj1);
 
-console.log(finalObj);
+const magic2 = (obj, parent) => {
+    for(let key in obj) {
+        if(typeof obj[key] === 'object') {
+            if(parent==="") 
+                magic2(obj[key], key);
+            else
+                magic2(obj[key], parent+"."+key);
+        }
+        else {
+            finalObj2[parent+"."+key] = obj[key];
+        }
+    }
+}
+
+magic2(obj, "");
+
+console.log(finalObj2);
